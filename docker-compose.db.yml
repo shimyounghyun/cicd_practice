@@ -1,0 +1,21 @@
+version: '3.7'
+
+networks:
+  default:
+    external:
+      name: db
+services:
+  postgres:
+    image: postgres:10
+    container_name: postgres
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=${DB_ROOT_PASSWORD}
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_DB=${DB_NAME}
+    ports:
+      - '5432:5432'
+volumes:
+  appdata:
+    pgdata: local
