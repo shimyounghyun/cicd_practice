@@ -1,7 +1,7 @@
 #!/bin/bash
 
 DOCKER_APP_NAME=server
-DOCKER_DB_NAME=db
+DOCKER_DB_NAME=postgres
 
 EXIST_BLUE=$(docker-compose -p ${DOCKER_APP_NAME}-blue -f docker-compose.blue.yml ps | grep Up)
 EXIST_DB=$(docker-compose -p ${DOCKER_DB_NAME} -f docker-compose.db.yml ps | grep Up)

@@ -1,9 +1,5 @@
 version: '3.7'
 
-networks:
-  default:
-    external:
-      name: db
 services:
   postgres:
     image: postgres:10
@@ -16,6 +12,11 @@ services:
       - POSTGRES_DB=${DB_NAME}
     ports:
       - '5432:5432'
+    networks:
+      - app
+networks:
+  app:
+    driver: bridge
 volumes:
-  appdata:
-    pgdata: local
+  pgdata:
+    driver: local
