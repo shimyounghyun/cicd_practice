@@ -53,5 +53,5 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
           script: |
-            whoami
-            ls -al
+            cd ${{secrets.MOVE_DIRECTORY}}
+            sh deploy.sh
