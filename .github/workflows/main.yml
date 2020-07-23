@@ -54,4 +54,5 @@ jobs:
           port: ${{ secrets.PORT }}
           script: |
             cd ${{secrets.MOVE_DIRECTORY}}
+            sudo docker pull syh622/connected-42:latest
             sudo sh deploy.sh
