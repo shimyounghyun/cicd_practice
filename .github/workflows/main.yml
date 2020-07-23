@@ -38,6 +38,7 @@ jobs:
           docker tag syh622/connected-42 syh622/connected-42:${{ github.sha }}
           docker push syh622/connected-42:latest
           docker push syh622/connected-42:${{ github.sha }}
+
   cd:
     name: Push Docker image to Docker Hub
     runs-on: ubuntu-latest
