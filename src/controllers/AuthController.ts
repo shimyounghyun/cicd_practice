@@ -12,6 +12,6 @@ export class AuthController {
     @HttpCode(200)
     @Get("/status")
     public async status(){
-        return {result : 'success'};
+        return {result : 'change'};
     };
 };
