@@ -54,4 +54,4 @@ jobs:
           port: ${{ secrets.PORT }}
           script: |
             cd ${{secrets.MOVE_DIRECTORY}}
-            sh deploy.sh
+            sudo sh deploy.sh
